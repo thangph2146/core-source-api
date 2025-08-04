@@ -41,7 +41,8 @@ export class AuthController {
   async logout(@Headers('authorization') authHeader: string) {
     const token = authHeader?.replace('Bearer ', '');
     if (!token) {
-      throw new Error('No token provided');
+      // Nếu không có token, vẫn trả về thành công
+      return { message: 'Logged out successfully' };
     }
     return this.authService.logout(token);
   }

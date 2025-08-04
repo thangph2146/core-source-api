@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { UsersService } from './users.service';
-import { PrismaService } from '../database/prisma.service';
-import { User } from '../../generated/prisma';
+import { UsersService } from '../users.service';
+import { PrismaService } from '../../database/prisma.service';
+import { User } from '../../../generated/prisma';
 
 describe('UsersService', () => {
   let service: UsersService;
@@ -45,6 +45,9 @@ describe('UsersService', () => {
           id: 1,
           email: 'test1@example.com',
           name: 'Test User 1',
+          password: null,
+          isEmailVerified: false,
+          avatar: null,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -52,6 +55,9 @@ describe('UsersService', () => {
           id: 2,
           email: 'test2@example.com',
           name: 'Test User 2',
+          password: null,
+          isEmailVerified: false,
+          avatar: null,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -72,6 +78,9 @@ describe('UsersService', () => {
         id: 1,
         email: 'test@example.com',
         name: 'Test User',
+        password: null,
+        isEmailVerified: false,
+        avatar: null,
         createdAt: new Date(),
         updatedAt: new Date(),
       };
@@ -109,6 +118,9 @@ describe('UsersService', () => {
         id: 3,
         email: createData.email,
         name: createData.name,
+        password: null,
+        isEmailVerified: false,
+        avatar: null,
         createdAt: new Date(),
         updatedAt: new Date(),
       };
@@ -132,6 +144,9 @@ describe('UsersService', () => {
         id: 4,
         email: createData.email,
         name: null,
+        password: null,
+        isEmailVerified: false,
+        avatar: null,
         createdAt: new Date(),
         updatedAt: new Date(),
       };
@@ -157,6 +172,9 @@ describe('UsersService', () => {
         id: 1,
         email: 'test@example.com',
         name: updateData.name,
+        password: null,
+        isEmailVerified: false,
+        avatar: null,
         createdAt: new Date(),
         updatedAt: new Date(),
       };
@@ -181,6 +199,9 @@ describe('UsersService', () => {
         id: 1,
         email: updateData.email,
         name: 'Test User',
+        password: null,
+        isEmailVerified: false,
+        avatar: null,
         createdAt: new Date(),
         updatedAt: new Date(),
       };
@@ -203,6 +224,9 @@ describe('UsersService', () => {
         id: 1,
         email: 'test@example.com',
         name: 'Test User',
+        password: null,
+        isEmailVerified: false,
+        avatar: null,
         createdAt: new Date(),
         updatedAt: new Date(),
       };
